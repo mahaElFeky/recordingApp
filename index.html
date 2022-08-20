@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>برنامج تحسين النطق</title>
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/fontawesome-free-6.0.0-beta3-web/css/all.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- <div id="intrancePage" style="display: none;">
+        <form>
+            <h1>تسجيل دخول</h1>
+            <label>الاسم</label><input type="text" id="name">
+            <br>
+            <label>السن</label>
+            <input list="ages" name="age" id="age">
+            <datalist id="ages">
+              <option value="2-5">
+              <option value="5-7">
+              <option value="7-10">
+            </datalist><br>
+            <label>ادخل صورة لك </label>
+            <input type="file" id="imageInput" class="custom-file-input" name="filename" accept="image/png, image/jpg" onchange="readFile(this)" />
+
+        </form>
+        <button id="loginBtn" onclick="enterProgram()"> دخول</button>
+
+    </div> -->
+
+    <div id="homePage">
+        <!-- <div id="surahsList"> -->
+        <div id="menuBar">
+            <button id="surahName">الفاتحة</button>
+            <audio controls id="surahAudio" src="audio/001.mp3">  </audio>
+        </div>
+
+        <div id="menu" style="display: none;">
+
+            <div class="cell">
+                <h2>الفاتحة</h2>
+
+            </div>
+            <div class="cell">
+                <h2>الاخلاص</h2>
+            </div>
+            <div class="cell">
+                <h2>الفلق</h2>
+            </div>
+            <div class="cell">
+                <h2>الناس</h2>
+            </div>
+        </div>
+
+        <!-- https://ar.islamway.net/collection/12517/%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81-%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%85-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D8%A7%D8%B1 -->
+        <!-- </div> -->
+
+
+        <div id="userSection">
+            <form>
+                <h2 id="titleName"></h2>
+                <div id="nameOfChild">
+                    <input type="text" id="name" onchange="getName(this.value)" placeholder="ادخل الاسم">
+                </div>
+                <img id="image" class="uploadedImage source" onclick="getImage()">
+                <div id="childIdentity" style="display: none;">
+                    <input type="file" id="imageInput" class="custom-file-input" name="filename" accept=" image/jpg, image/png" onchange="readFile(this)" />
+                </div>
+            </form>
+
+            <div id="recordingButtons">
+                <i class="fa-solid fa-microphone-lines startRecording" onclick="startAudioRecording()"></i>
+                <i class="fa-solid fa-microphone-lines-slash  cancelRecording" onclick="cancelAudioRecording()"></i>
+                <i class="fa-solid fa-circle-stop  stopRecording" onclick="StopAudioRecording()"></i>
+
+                <i class="red-recording-dot fa-solid fa-circle recordingIndicator hide "></i>
+                <!-- <div id="uploadedImage" style="display: none;"></div> -->
+                <p class="elapsed-time"></p>
+            </div>
+            <div id="page">
+                <audio controls hidden class="audio-element" id="audioRecorder"></audio>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <p>خاص برسالة ........ </p>
+        <p> اعداد الباحثة/ آلاء عبد الله أحمد عامر</p>
+
+    </footer>
+    <script src="js/audiorecorder.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+<!--source code for demo: https://github.com/ralzohairi/js-audio-recording -->
+<!--tutorial for demo: https://ralzohairi.medium.com/audio-recording-in-javascript-96eed45b75ee -->
+<!-- https://web.dev/media-recording-audio/ -->
+<!-- API: https://rapidapi.com/blog/how-to-use-an-api-with-javascript/?utm_source=google&utm_medium=cpc&utm_campaign=DSA&gclid=CjwKCAjwopWSBhB6EiwAjxmqDcNvFzOWiJwUvgFmRcmvWlZVv6I2va5QrMRga9jzXcS6LmtPqK8r-xoC7fEQAvD_BwE -->
+<!-- promises, .then(), catch : https://lucymarmitchell.medium.com/using-then-catch-finally-to-handle-errors-in-javascript-promises-6de92bce3afc -->
+<!-- streams: https://nodesource.com/blog/understanding-streams-in-nodejs/#:~:text=Streams%20are%20one%20of%20the,exchange%20in%20an%20efficient%20way. -->
