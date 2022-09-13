@@ -1,0 +1,420 @@
+html {
+    direction: rtl;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: calc(fit-content + 10px);
+    /* height: fit-content; */
+    /* opacity: .8; */
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    top: calc(100% - 50px);
+    background-color: #488a06;
+    color: white;
+    font-size: .9em;
+    text-align: center;
+    overflow: hidden;
+}
+
+p {
+    padding: 4px;
+    margin: 0;
+}
+
+li {
+    direction: ltr;
+    text-align: center;
+    list-style-position: inside;
+    padding: 0 3px;
+}
+
+h2,
+h4 {
+    text-align: center;
+    color: #ffffff;
+    margin: 3px 0;
+    padding: 0;
+}
+
+#titleName {
+    color: #754c05;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #dcaf0e;
+}
+
+#recordAudio::-webkit-media-controls-panel {
+    background-color: #d3ebef;
+    border-color: #447f83;
+    border: 3px solid;
+}
+
+.buttonIcons {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+#mic {
+    width: 70px;
+    height: 70px;
+}
+
+#homePage {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    right: 10%;
+    /* flex-direction: column; */
+    margin: 2% 10%;
+    /* z-index: 2; */
+}
+
+#menuBar,
+#userSection {
+    position: absolute;
+    width: 80%;
+}
+
+#userSection {
+    top: 70px;
+    /* height: 100%; */
+    /* background-color: rgba(250, 248, 245, 0.345); */
+    text-align: center;
+}
+
+#recordAudio {
+    width: 300px;
+    /* margin-top: 10px; */
+    padding-top: 10px;
+}
+
+#downloadIconImg {
+    /* display: block; */
+    width: 25px;
+    height: 25px;
+    padding-left: 3px;
+    opacity: .7;
+    /* padding-top: 0; */
+}
+
+#downloadIconImg:hover {
+    opacity: 1;
+}
+
+#menuBar {
+    display: flex;
+    flex-direction: row;
+}
+
+#surahName {
+    width: 180px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 20%;
+    font-size: 2em;
+    font-weight: bold;
+    color: #d1a618;
+    text-shadow: #f9f9f9;
+    margin-right: 10%;
+    padding: 0 5px;
+}
+
+#surahName:hover {
+    background-color: rgba(250, 248, 245, 0.345);
+    color: #754c05;
+}
+
+#surahAudio {
+    width: 500px;
+    padding: 0 5px;
+}
+
+#menu {
+    position: absolute;
+    left: 2.5%;
+    /* right: 5%; */
+    height: fit-content;
+    z-index: 5;
+    width: 75%;
+    /* height: 80%; */
+    padding-bottom: 10px;
+    margin: 6% 20%;
+    background-color: #d1a618;
+    display: grid;
+    grid-template-columns: auto auto 90%;
+}
+
+button.grid-item {
+    width: 60px;
+    height: 25px;
+    text-align: right;
+    padding: 0 2px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 15px;
+    font-weight: bold;
+    border: .5px white;
+    border-radius: 40%;
+    background-color: rgba(250, 248, 245, 0.345);
+    color: #754c05;
+    text-align: center;
+}
+
+button.grid-item:hover {
+    background-color: #754c05;
+    color: white;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'اختر صورة لك';
+    display: flex;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    /* -webkit-user-select: none; */
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.uploadedImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: dashed;
+    border-color: #f8c66f;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.source {
+    background-image: url(../images/child-reading.jpg);
+}
+
+#name {
+    width: 250px;
+    height: 30px;
+    background-color: #fbfaf8;
+    border: 1px #fff;
+    margin: 7px 0;
+    opacity: .8;
+}
+
+#imageInput {
+    /* position: absolute; */
+    width: 150px;
+    height: 150px;
+    /* border-radius: 50%; */
+    /* top: 80px; */
+    /* text-align: center; */
+    /* z-index: 5; */
+}
+
+.animationInfo {
+    animation-name: flashing-recording-dot;
+    -webkit-animation-name: flashing-recording-dot;
+    -moz-animation-name: flashing-recording-dot;
+    -o-animation-name: flashing-recording-dot;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+}
+
+
+/* The animation code */
+
+@keyframes flashing-recording-dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes flashing-recording-dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes flashing-recording-dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes flashing-recording-dot {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.elapsed-time {
+    font-size: 16px;
+    font-weight: bold;
+    color: #754c05;
+}
+
+@media only screen and (max-width: 930px) {
+    #homePage {
+        width: 90%;
+        margin: 0;
+    }
+    #menuBar,
+    #userSection {
+        width: 90%;
+        left: 10%;
+    }
+    #menu {
+        width: 95%;
+        margin: 70px 5%;
+    }
+    footer {
+        /* height: 7%; */
+        /* top: calc(100% - 50px); */
+        /* top: 93%; */
+        font-size: .8em;
+    }
+    audio {
+        width: 300px;
+    }
+    #recordAudio {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #menu {
+        width: 100%;
+        margin: 70px 2%;
+    }
+    button.grid-item {
+        width: 45px;
+        height: 25px;
+        font-size: 13px;
+        margin-top: 5px;
+        margin-right: 7px;
+        font-weight: bold;
+        border-radius: 40%;
+    }
+}
+
+
+/* 
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: white;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-image: url(../images/playIcon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-image: url(../images/volume.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider {
+    
+    color: white;
+}
+
+audio::-webkit-media-controls-toggle-closed-captions-button {
+    display: none;
+} */
+
+
+/* 
+audio::-webkit-media-controls-mute-button
+audio::-webkit-media-controls-play-button
+audio::-webkit-media-controls-timeline-container
+audio::-webkit-media-controls-current-time-display
+audio::-webkit-media-controls-time-remaining-display
+audio::-webkit-media-controls-timeline
+audio::-webkit-media-controls-volume-slider-container
+audio::-webkit-media-controls-volume-slider
+audio::-webkit-media-controls-seek-back-button
+audio::-webkit-media-controls-seek-forward-button
+audio::-webkit-media-controls-fullscreen-button
+audio::-webkit-media-controls-rewind-button
+audio::-webkit-media-controls-return-to-realtime-button
+audio::-webkit-media-controls-toggle-closed-captions-button */
