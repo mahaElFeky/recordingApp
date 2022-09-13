@@ -3,98 +3,185 @@
 
 <head>
     <meta charset="utf-8">
-    <title>برنامج تحسين النطق</title>
+    <title>برنامج القرآن الكريم فى تحسين النطق </title>
     <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="css/fontawesome-free-6.0.0-beta3-web/css/all.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+    <!-- <link rel="stylesheet" href="css/fontawesome-free-6.0.0-beta3-web/css/all.css"> -->
+
+    <link rel="icon" type="image/x-icon" href="images/favicon-35x35.png">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- <div id="intrancePage" style="display: none;">
-        <form>
-            <h1>تسجيل دخول</h1>
-            <label>الاسم</label><input type="text" id="name">
-            <br>
-            <label>السن</label>
-            <input list="ages" name="age" id="age">
-            <datalist id="ages">
-              <option value="2-5">
-              <option value="5-7">
-              <option value="7-10">
-            </datalist><br>
-            <label>ادخل صورة لك </label>
-            <input type="file" id="imageInput" class="custom-file-input" name="filename" accept="image/png, image/jpg" onchange="readFile(this)" />
-
-        </form>
-        <button id="loginBtn" onclick="enterProgram()"> دخول</button>
-
-    </div> -->
 
     <div id="homePage">
-        <!-- <div id="surahsList"> -->
         <div id="menuBar">
-            <button id="surahName">الفاتحة</button>
-            <audio controls id="surahAudio" src="audio/001.mp3">  </audio>
+            <button id="surahName" onclick="openMenu()">الفَاتِحَة</button>
+            <audio controls id="surahAudio" src="https://download.quran.islamway.net/quran3/965/12517/32/001.mp3">  </audio>
         </div>
 
         <div id="menu" style="display: none;">
+            <h2>المصحف المعلم مع التكرار</h2>
+            <h4>بصوت القارئ محمود خليل الحصرى</h4>
+            <button class="grid-item" id="n1" name="الفَاتِحَة" value="https://download.quran.islamway.net/quran3/965/12517/32/001.mp3" onclick="playSurah(this);">   الفَاتِحَة</button>
+            <button class="grid-item" id="n2" name="البَقَرَة" value="https://download.quran.islamway.net/quran3/965/12517/128/002.mp3" onclick="playSurah(this);"> البَقَرَة	</button>
+            <button class="grid-item" id="n3" name="آل عِمرَان	" value="https://download.quran.islamway.net/quran3/965/12517/128/003.mp3" onclick="playSurah(this);">آل عِمرَان	</button>
+            <button class="grid-item" id="n4" name="النِّسَاء" value="https://download.quran.islamway.net/quran3/965/12517/128/004.mp3" onclick="playSurah(this);"> النِّسَاء</button>
+            <button class="grid-item" id="n5" name="المَائدة" value="https://download.quran.islamway.net/quran3/965/12517/128/005.mp3" onclick="playSurah(this);"> المَائدة</button>
+            <button class="grid-item" id="n6" name="الأنعَام" value="https://download.quran.islamway.net/quran3/965/12517/128/006.mp3" onclick="playSurah(this);">الأنعَام </button>
+            <button class="grid-item" id="n7" name="الأعرَاف" value="https://download.quran.islamway.net/quran3/965/12517/128/007.mp3" onclick="playSurah(this);"> الأعرَاف</button>
 
-            <div class="cell">
-                <h2>الفاتحة</h2>
+            <button class="grid-item" id="n8" name="الأنفَال" value="https://download.quran.islamway.net/quran3/965/12517/128/008.mp3" onclick="playSurah(this);"> الأنفَال</button>
+            <button class="grid-item" id="n9" name="التوبَة" value="https://download.quran.islamway.net/quran3/965/12517/128/009.mp3" onclick="playSurah(this);"> التوبَة</button>
+            <button class="grid-item" id="n10" name="يُونس" value="https://download.quran.islamway.net/quran3/965/12517/128/010.mp3" onclick="playSurah(this);">يُونس </button>
+            <button class="grid-item" id="n11" name="هُود" value="https://download.quran.islamway.net/quran3/965/12517/128/011.mp3" onclick="playSurah(this);">هُود </button>
+            <button class="grid-item" id="n12" name="يُوسُف" value="https://download.quran.islamway.net/quran3/965/12517/128/012.mp3" onclick="playSurah(this);">يُوسُف </button>
+            <button class="grid-item" id="n13" name="الرَّعْد" value="https://download.quran.islamway.net/quran3/965/12517/128/013.mp3" onclick="playSurah(this);">الرَّعْد </button>
+            <button class="grid-item" id="n14" name="إبراهِيم" value="https://download.quran.islamway.net/quran3/965/12517/128/014.mp3" onclick="playSurah(this);">إبراهِيم </button>
+            <button class="grid-item" id="n15" name="الحِجْر" value="https://download.quran.islamway.net/quran3/965/12517/128/015.mp3" onclick="playSurah(this);">الحِجْر </button>
+            <button class="grid-item" id="n16" name="النَّحْل" value="https://download.quran.islamway.net/quran3/965/12517/128/016.mp3" onclick="playSurah(this);"> النَّحْل</button>
+            <button class="grid-item" id="n17" name="الإسْرَاء" value="https://download.quran.islamway.net/quran3/965/12517/128/017.mp3" onclick="playSurah(this);">الإسْرَاء </button>
+            <button class="grid-item" id="n18" name="الكهْف" value="https://download.quran.islamway.net/quran3/965/12517/128/018.mp3" onclick="playSurah(this);">الكهْف </button>
+            <button class="grid-item" id="n19" name="مَريَم" value="https://download.quran.islamway.net/quran3/965/12517/128/019.mp3" onclick="playSurah(this);">مَريَم </button>
+            <button class="grid-item" id="n20" name="طه" value="https://download.quran.islamway.net/quran3/965/12517/128/020.mp3" onclick="playSurah(this);">طه </button>
+            <button class="grid-item" id="n21" name="الأنبيَاء" value="https://download.quran.islamway.net/quran3/965/12517/128/021.mp3" onclick="playSurah(this);">الأنبيَاء </button>
+            <button class="grid-item" id="n22" name="الحَج" value="https://download.quran.islamway.net/quran3/965/12517/128/022.mp3" onclick="playSurah(this);">الحَج </button>
+            <button class="grid-item" id="n23" name="المُؤمنون" value="https://download.quran.islamway.net/quran3/965/12517/128/023.mp3" onclick="playSurah(this);">المُؤمنون </button>
+            <button class="grid-item" id="n24" name="النُّور" value="https://download.quran.islamway.net/quran3/965/12517/128/024.mp3" onclick="playSurah(this);">النُّور </button>
+            <button class="grid-item" id="n25" name="الفُرْقان" value="https://download.quran.islamway.net/quran3/965/12517/128/025.mp3" onclick="playSurah(this);">الفُرْقان </button>
+            <button class="grid-item" id="n26" name="الشُّعَرَاء" value="https://download.quran.islamway.net/quran3/965/12517/128/026.mp3" onclick="playSurah(this);">الشُّعَرَاء </button>
+            <button class="grid-item" id="n27" name="النَّمْل" value="https://download.quran.islamway.net/quran3/965/12517/128/027.mp3" onclick="playSurah(this);"> النَّمْل</button>
+            <button class="grid-item" id="n28" name="القَصَص" value="https://download.quran.islamway.net/quran3/965/12517/128/028.mp3" onclick="playSurah(this);">القَصَص </button>
+            <button class="grid-item" id="n29" name="العَنكبوت" value="https://download.quran.islamway.net/quran3/965/12517/128/029.mp3" onclick="playSurah(this);"> العَنكبوت</button>
+            <button class="grid-item" id="n30" name="الرُّوم" value="https://download.quran.islamway.net/quran3/965/12517/128/030.mp3" onclick="playSurah(this);"> الرُّوم</button>
+            <button class="grid-item" id="n31" name="لقمَان" value="https://download.quran.islamway.net/quran3/965/12517/128/031.mp3" onclick="playSurah(this);">لقمَان </button>
+            <button class="grid-item" id="n32" name="السَّجدَة" value="https://download.quran.islamway.net/quran3/965/12517/128/032.mp3" onclick="playSurah(this);">السَّجدَة </button>
+            <button class="grid-item" id="n33" name="الأحزَاب" value="https://download.quran.islamway.net/quran3/965/12517/128/033.mp3" onclick="playSurah(this);">الأحزَاب </button>
+            <button class="grid-item" id="n34" name="سَبَأ" value="https://download.quran.islamway.net/quran3/965/12517/128/034.mp3" onclick="playSurah(this);">سَبَأ </button>
+            <button class="grid-item" id="n35" name="فَاطِر" value="https://download.quran.islamway.net/quran3/965/12517/128/035.mp3" onclick="playSurah(this);">فَاطِر </button>
+            <button class="grid-item" id="n36" name="يس" value="https://download.quran.islamway.net/quran3/965/12517/128/036.mp3" onclick="playSurah(this);">يس </button>
+            <button class="grid-item" id="n37" name="الصَّافات" value="https://download.quran.islamway.net/quran3/965/12517/128/037.mp3" onclick="playSurah(this);"> الصَّافات</button>
+            <button class="grid-item" id="n38" name="ص" value="https://download.quran.islamway.net/quran3/965/12517/128/038.mp3" onclick="playSurah(this);"> ص</button>
+            <button class="grid-item" id="n39" name="الزُّمَر" value="https://download.quran.islamway.net/quran3/965/12517/128/039.mp3" onclick="playSurah(this);"> الزُّمَر</button>
+            <button class="grid-item" id="n40" name="غَافِر" value="https://download.quran.islamway.net/quran3/965/12517/128/040.mp3" onclick="playSurah(this);">غَافِر </button>
+            <button class="grid-item" id="n41" name="فُصِّلَتْ" value="https://download.quran.islamway.net/quran3/965/12517/128/041.mp3" onclick="playSurah(this);">فُصِّلَتْ </button>
+            <button class="grid-item" id="n42" name="الشُّورَى" value="https://download.quran.islamway.net/quran3/965/12517/128/042.mp3" onclick="playSurah(this);"> الشُّورَى</button>
+            <button class="grid-item" id="n43" name="الزُّخْرُف" value="https://download.quran.islamway.net/quran3/965/12517/128/043.mp3" onclick="playSurah(this);">الزُّخْرُف </button>
+            <button class="grid-item" id="n44" name="الدخَان" value="https://download.quran.islamway.net/quran3/965/12517/128/044.mp3" onclick="playSurah(this);">الدخَان </button>
+            <button class="grid-item" id="n45" name="الجَاثيَة" value="https://download.quran.islamway.net/quran3/965/12517/128/045.mp3" onclick="playSurah(this);">الجَاثيَة </button>
+            <button class="grid-item" id="n46" name="الأحْقاف" value="https://download.quran.islamway.net/quran3/965/12517/128/046.mp3" onclick="playSurah(this);">الأحْقاف </button>
+            <button class="grid-item" id="n47" name="محَمَّد" value="https://download.quran.islamway.net/quran3/965/12517/128/047.mp3" onclick="playSurah(this);">محَمَّد </button>
+            <button class="grid-item" id="n48" name="الفَتْح" value="https://download.quran.islamway.net/quran3/965/12517/128/048.mp3" onclick="playSurah(this);"> الفَتْح</button>
+            <button class="grid-item" id="n49" name="الحُجرَات" value="https://download.quran.islamway.net/quran3/965/12517/128/049.mp3" onclick="playSurah(this);"> الحُجرَات</button>
+            <button class="grid-item" id="n50" name="ق" value="https://download.quran.islamway.net/quran3/965/12517/128/050.mp3" onclick="playSurah(this);">ق </button>
+            <button class="grid-item" id="n51" name="الذَّاريَات" value="https://download.quran.islamway.net/quran3/965/12517/128/051.mp3" onclick="playSurah(this);">الذَّاريَات </button>
+            <button class="grid-item" id="n52" name="الطُّور" value="https://download.quran.islamway.net/quran3/965/12517/128/052.mp3" onclick="playSurah(this);">الطُّور </button>
+            <button class="grid-item" id="n53" name="النَّجْم" value="https://download.quran.islamway.net/quran3/965/12517/128/053.mp3" onclick="playSurah(this);">النَّجْم </button>
+            <button class="grid-item" id="n54" name="القَمَر" value="https://download.quran.islamway.net/quran3/965/12517/128/054.mp3" onclick="playSurah(this);">القَمَر </button>
+            <button class="grid-item" id="n55" name="الرَّحمن" value="https://download.quran.islamway.net/quran3/965/12517/128/055.mp3" onclick="playSurah(this);"> الرَّحمن</button>
+            <button class="grid-item" id="n56" name="الوَاقِعَة" value="https://download.quran.islamway.net/quran3/965/12517/128/056.mp3" onclick="playSurah(this);">الوَاقِعَة </button>
+            <button class="grid-item" id="n57" name="الحَديد" value="https://download.quran.islamway.net/quran3/965/12517/128/057.mp3" onclick="playSurah(this);"> الحَديد</button>
+            <button class="grid-item" id="n58" name="المجَادلة" value="https://download.quran.islamway.net/quran3/965/12517/128/058.mp3" onclick="playSurah(this);"> المجَادلة</button>
+            <button class="grid-item" id="n59" name="الحَشر" value="https://download.quran.islamway.net/quran3/965/12517/128/059.mp3" onclick="playSurah(this);"> الحَشر</button>
+            <button class="grid-item" id="n60" name="المُمتَحنَة" value="https://download.quran.islamway.net/quran3/965/12517/128/060.mp3" onclick="playSurah(this);">المُمتَحنَة </button>
+            <button class="grid-item" id="n61" name="الصَّف" value="https://download.quran.islamway.net/quran3/965/12517/128/061.mp3" onclick="playSurah(this);">الصَّف </button>
+            <button class="grid-item" id="n62" name="الجُمُعَة" value="https://download.quran.islamway.net/quran3/965/12517/128/062.mp3" onclick="playSurah(this);"> الجُمُعَة</button>
+            <button class="grid-item" id="n63" name="المنَافِقون" value="https://download.quran.islamway.net/quran3/965/12517/128/063.mp3" onclick="playSurah(this);"> المنَافِقون</button>
+            <button class="grid-item" id="n64" name="التغَابُن" value="https://download.quran.islamway.net/quran3/965/12517/128/064.mp3" onclick="playSurah(this);">التغَابُن </button>
+            <button class="grid-item" id="n65" name="الطلَاق" value="https://download.quran.islamway.net/quran3/965/12517/128/065.mp3" onclick="playSurah(this);"> الطلَاق</button>
+            <button class="grid-item" id="n66" name="التحْريم" value="https://download.quran.islamway.net/quran3/965/12517/128/066.mp3" onclick="playSurah(this);"> التحْريم</button>
+            <button class="grid-item" id="n67" name="المُلْك" value="https://download.quran.islamway.net/quran3/965/12517/128/067.mp3" onclick="playSurah(this);"> المُلْك</button>
+            <button class="grid-item" id="n68" name="القَلَم" value="https://download.quran.islamway.net/quran3/965/12517/128/068.mp3" onclick="playSurah(this);">القَلَم </button>
+            <button class="grid-item" id="n69" name="الحَاقَّة" value="https://download.quran.islamway.net/quran3/965/12517/128/069.mp3" onclick="playSurah(this);"> الحَاقَّة</button>
+            <button class="grid-item" id="n70" name="المعَارج" value="https://download.quran.islamway.net/quran3/965/12517/128/070.mp3" onclick="playSurah(this);"> المعَارج</button>
+            <button class="grid-item" id="n71" name="نُوح" value="https://download.quran.islamway.net/quran3/965/12517/128/071.mp3" onclick="playSurah(this);">نُوح </button>
+            <button class="grid-item" id="n72" name="الجِن" value="https://download.quran.islamway.net/quran3/965/12517/128/072.mp3" onclick="playSurah(this);">الجِن </button>
+            <button class="grid-item" id="n73" name="المُزَّمِّل" value="https://download.quran.islamway.net/quran3/965/12517/128/073.mp3" onclick="playSurah(this);">المُزَّمِّل </button>
+            <button class="grid-item" id="n74" name="المُدَّثِّر" value="https://download.quran.islamway.net/quran3/965/12517/128/074.mp3" onclick="playSurah(this);"> المُدَّثِّر</button>
+            <button class="grid-item" id="n75" name="القِيَامَة" value="https://download.quran.islamway.net/quran3/965/12517/128/075.mp3" onclick="playSurah(this);"> القِيَامَة</button>
+            <button class="grid-item" id="n76" name="الإنسَان" value="https://download.quran.islamway.net/quran3/965/12517/128/076.mp3" onclick="playSurah(this);">الإنسَان </button>
+            <button class="grid-item" id="n77" name="المُرسَلات" value="https://download.quran.islamway.net/quran3/965/12517/128/077.mp3" onclick="playSurah(this);">المُرسَلات </button>
 
-            </div>
-            <div class="cell">
-                <h2>الاخلاص</h2>
-            </div>
-            <div class="cell">
-                <h2>الفلق</h2>
-            </div>
-            <div class="cell">
-                <h2>الناس</h2>
-            </div>
+            <button class="grid-item" id="n78" name="النَّبَأ" value="https://download.quran.islamway.net/quran3/965/12517/128/078.mp3" onclick="playSurah(this);">النَّبَأ </button>
+            <button class="grid-item" id="n79" name="النّازعَات" value="https://download.quran.islamway.net/quran3/965/12517/128/079.mp3" onclick="playSurah(this);">النّازعَات </button>
+            <button class="grid-item" id="n80" name="عَبَس" value="https://download.quran.islamway.net/quran3/965/12517/128/080.mp3" onclick="playSurah(this);"> عَبَس</button>
+            <button class="grid-item" id="n81" name="التَّكوير" value="https://download.quran.islamway.net/quran3/965/12517/128/081.mp3" onclick="playSurah(this);">التَّكوير </button>
+            <button class="grid-item" id="n82" name="الانفِطار" value="https://download.quran.islamway.net/quran3/965/12517/128/082.mp3" onclick="playSurah(this);"> الانفِطار</button>
+            <button class="grid-item" id="n83" name="المطفِّفِين" value="https://download.quran.islamway.net/quran3/965/12517/128/083.mp3" onclick="playSurah(this);">المطفِّفِين </button>
+            <button class="grid-item" id="n84" name="الانْشِقَاق" value="https://download.quran.islamway.net/quran3/965/12517/128/084.mp3" onclick="playSurah(this);"> الانْشِقَاق</button>
+            <button class="grid-item" id="n85" name="البرُوج" value="https://download.quran.islamway.net/quran3/965/12517/128/085.mp3" onclick="playSurah(this);"> البرُوج</button>
+            <button class="grid-item" id="n86" name="الطَّارِق" value="https://download.quran.islamway.net/quran3/965/12517/128/086.mp3" onclick="playSurah(this);"> الطَّارِق</button>
+            <button class="grid-item" id="n87" name="الأَعْلى" value="https://download.quran.islamway.net/quran3/965/12517/128/087.mp3" onclick="playSurah(this);">الأَعْلى </button>
+            <button class="grid-item" id="n88" name="الغَاشِية" value="https://download.quran.islamway.net/quran3/965/12517/128/088.mp3" onclick="playSurah(this);">الغَاشِية </button>
+            <button class="grid-item" id="n89" name="الفَجْر" value="https://download.quran.islamway.net/quran3/965/12517/128/089.mp3" onclick="playSurah(this);">الفَجْر </button>
+            <button class="grid-item" id="n90" name="البَلَد" value="https://download.quran.islamway.net/quran3/965/12517/128/090.mp3" onclick="playSurah(this);"> البَلَد</button>
+            <button class="grid-item" id="n91" name="الشَّمْس" value="https://download.quran.islamway.net/quran3/965/12517/128/091.mp3" onclick="playSurah(this);"> الشَّمْس</button>
+            <button class="grid-item" id="n92" name="الليْل" value="https://download.quran.islamway.net/quran3/965/12517/128/092.mp3" onclick="playSurah(this);"> الليْل</button>
+            <button class="grid-item" id="n93" name="الضُّحَى" value="https://download.quran.islamway.net/quran3/965/12517/128/093.mp3" onclick="playSurah(this);">الضُّحَى </button>
+            <button class="grid-item" id="n94" name="الشَّرْح" value="https://download.quran.islamway.net/quran3/965/12517/128/094.mp3" onclick="playSurah(this);"> الشَّرْح</button>
+            <button class="grid-item" id="n95" name="التِّين" value="https://download.quran.islamway.net/quran3/965/12517/128/095.mp3" onclick="playSurah(this);">التِّين </button>
+            <button class="grid-item" id="n96" name="العَلَق" value="https://download.quran.islamway.net/quran3/965/12517/128/096.mp3" onclick="playSurah(this);">العَلَق </button>
+            <button class="grid-item" id="n97" name="القَدْر" value="https://download.quran.islamway.net/quran3/965/12517/128/097.mp3" onclick="playSurah(this);"> القَدْر</button>
+            <button class="grid-item" id="n98" name="البَينَة" value="https://download.quran.islamway.net/quran3/965/12517/128/098.mp3" onclick="playSurah(this);"> البَينَة</button>
+            <button class="grid-item" id="n99" name="الزلزَلة" value="https://download.quran.islamway.net/quran3/965/12517/128/099.mp3" onclick="playSurah(this);"> الزلزَلة</button>
+            <button class="grid-item" id="n100" name="العَادِيات" value="https://download.quran.islamway.net/quran3/965/12517/128/100.mp3" onclick="playSurah(this);">العَادِيات </button>
+            <button class="grid-item" id="n101" name="القَارِعة" value="https://download.quran.islamway.net/quran3/965/12517/128/101.mp3" onclick="playSurah(this);">القَارِعة </button>
+            <button class="grid-item" id="n102" name="التَّكَاثر" value="https://download.quran.islamway.net/quran3/965/12517/128/102.mp3" onclick="playSurah(this);">التَّكَاثر </button>
+            <button class="grid-item" id="n103" name="العَصْر" value="https://download.quran.islamway.net/quran3/965/12517/128/103.mp3" onclick="playSurah(this);">العَصْر </button>
+            <button class="grid-item" id="n104" name="الهُمَزَة" value="https://download.quran.islamway.net/quran3/965/12517/128/104.mp3" onclick="playSurah(this);"> الهُمَزَة</button>
+            <button class="grid-item" id="n105" name="الفِيل" value="https://download.quran.islamway.net/quran3/965/12517/128/105.mp3" onclick="playSurah(this);"> الفِيل</button>
+            <button class="grid-item" id="n106" name="قُرَيْش" value="https://download.quran.islamway.net/quran3/965/12517/128/106.mp3" onclick="playSurah(this);">قُرَيْش </button>
+            <button class="grid-item" id="n107" name="المَاعُون" value="https://download.quran.islamway.net/quran3/965/12517/128/107.mp3" onclick="playSurah(this);"> المَاعُون</button>
+            <button class="grid-item" id="n108" name="الكَوْثَر" value="https://download.quran.islamway.net/quran3/965/12517/128/108.mp3" onclick="playSurah(this);">الكَوْثَر </button>
+            <button class="grid-item" id="n109" name="الكَافِرُون" value="https://download.quran.islamway.net/quran3/965/12517/128/109.mp3" onclick="playSurah(this);">الكَافِرُون </button>
+            <button class="grid-item" id="n110" name="النَّصر" value="https://download.quran.islamway.net/quran3/965/12517/128/110.mp3" onclick="playSurah(this);">النَّصر </button>
+            <button class="grid-item" id="n111" name="المَسَد" value="https://download.quran.islamway.net/quran3/965/12517/128/111.mp3" onclick="playSurah(this);"> المَسَد</button>
+            <button class="grid-item" id="n112" name="الإخْلَاص" value="https://download.quran.islamway.net/quran3/965/12517/128/112.mp3" onclick="playSurah(this);">الإخْلَاص </button>
+            <button class="grid-item" id="n113" name="الفَلَق" value="https://download.quran.islamway.net/quran3/965/12517/128/113.mp3" onclick="playSurah(this);">الفَلَق </button>
+            <button class="grid-item" id="n114" name="النَّاس" value="https://download.quran.islamway.net/quran3/965/12517/128/114.mp3" onclick="playSurah(this);"> النَّاس</button>
+
+
         </div>
 
         <!-- https://ar.islamway.net/collection/12517/%D8%A7%D9%84%D9%85%D8%B5%D8%AD%D9%81-%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%85-%D9%85%D8%B9-%D8%A7%D9%84%D8%AA%D9%83%D8%B1%D8%A7%D8%B1 -->
-        <!-- </div> -->
 
-
-        <div id="userSection">
+        <div id="userSection" onclick="outsideClick()">
             <form>
                 <h2 id="titleName"></h2>
                 <div id="nameOfChild">
-                    <input type="text" id="name" onchange="getName(this.value)" placeholder="ادخل الاسم">
+                    <input type="text" id="name" onchange="getName(this.value)" placeholder="ادخل اسمك">
                 </div>
                 <img id="image" class="uploadedImage source" onclick="getImage()">
+                <p class="elapsed-time"></p>
+
                 <div id="childIdentity" style="display: none;">
                     <input type="file" id="imageInput" class="custom-file-input" name="filename" accept=" image/jpg, image/png" onchange="readFile(this)" />
                 </div>
             </form>
+            <main>
+                <div class="controls">
+                    <!-- <button type="button" id="mic"> الميكروفون</button> -->
+                    <img class="buttonIcons" src="images/mic.png" id="mic">
+                    <!-- <button type="button" id="record" hidden>ابدأ التسجيل</button> -->
+                    <img class="buttonIcons" src="images/record.png" id="record" hidden>
+                    <!-- <button id="pause" hidden>وقف مؤقت</button> -->
+                    <img class="buttonIcons" src="images/pause.png" id="pause" hidden>
+                </div>
+                <!-- <img src="images/gif2.gif"> -->
+                <ol id="recordings"></ol>
+            </main>
 
-            <div id="recordingButtons">
-                <i class="fa-solid fa-microphone-lines startRecording" onclick="startAudioRecording()"></i>
-                <i class="fa-solid fa-microphone-lines-slash  cancelRecording" onclick="cancelAudioRecording()"></i>
-                <i class="fa-solid fa-circle-stop  stopRecording" onclick="StopAudioRecording()"></i>
-
-                <i class="red-recording-dot fa-solid fa-circle recordingIndicator hide "></i>
-                <!-- <div id="uploadedImage" style="display: none;"></div> -->
-                <p class="elapsed-time"></p>
-            </div>
-            <div id="page">
-                <audio controls hidden class="audio-element" id="audioRecorder"></audio>
-            </div>
 
         </div>
 
     </div>
     <footer>
-        <p>خاص برسالة ........ </p>
+        <p> برنامج القرآن الكريم فى تحسين النطق لأطفال طيف التوحد</p>
         <p> اعداد الباحثة/ آلاء عبد الله أحمد عامر</p>
 
     </footer>
-    <script src="js/audiorecorder.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js "></script>
+
 </body>
 
 </html>
